@@ -30,7 +30,7 @@
                 size="mini"
                 type="default"
                 @click="onClickTag(t.id, 1)"
-                >{{ t.id }}{{ t.name }}</el-button
+                >{{ t.name }}</el-button
               >
               <el-button
                 v-if="t.state === 1"
@@ -82,7 +82,7 @@
           <el-card
             class="box-card"
             shadow="hover"
-            v-if="m[1].includes(musicName)"
+            v-if="m[1].includes(musicName) && isShow[Number(m[0])]"
           >
             <div class="card-top">
               <div class="card-content1">
@@ -262,6 +262,7 @@ export default {
       playingMusicName: "",
       prevTime: 0,
       expander: [],
+      isShow: [],
       tags: [
         { id: 0, name: "明るい", state: 0 },
         { id: 1, name: "楽しい", state: 0 },
@@ -300,15 +301,22 @@ export default {
         { id: 34, name: "希望", state: 0 },
         { id: 35, name: "絶望", state: 0 },
         { id: 36, name: "虚無", state: 0 },
-        { id: 37, name: "4拍子", state: 0 },
-        { id: 38, name: "3拍子", state: 0 },
-        { id: 39, name: "変拍子", state: 0 },
-        { id: 40, name: "スローテンポ", state: 0 },
-        { id: 41, name: "ミドルテンポ", state: 0 },
-        { id: 42, name: "アップテンポ", state: 0 },
-        { id: 43, name: "ループ対応", state: 0 },
-        { id: 44, name: "galGame", state: 0 },
-        { id: 45, name: "Hackathon", state: 0 }
+        { id: 37, name: "春", state: 0 },
+        { id: 38, name: "夏", state: 0 },
+        { id: 39, name: "秋", state: 0 },
+        { id: 40, name: "冬", state: 0 },
+        { id: 41, name: "4拍子", state: 0 },
+        { id: 42, name: "3拍子", state: 0 },
+        { id: 43, name: "変拍子", state: 0 },
+        { id: 44, name: "スローテンポ", state: 0 },
+        { id: 45, name: "ミドルテンポ", state: 0 },
+        { id: 46, name: "アップテンポ", state: 0 },
+        { id: 47, name: "ループ対応", state: 0 },
+        { id: 48, name: "galGame", state: 0 },
+        { id: 49, name: "Hackathon", state: 0 },
+        { id: 50, name: "M3", state: 0 },
+        { id: 51, name: "新歓コンピ", state: 0 },
+        { id: 52, name: "traP2DTM", state: 0 }
       ],
       musicTag: [],
       tagData: [],
@@ -321,6 +329,7 @@ export default {
     this.musics = getCsv("/data/musics.csv");
     this.onSort(0);
     this.expander = new Array(this.musics.length).fill(false);
+    this.isShow = new Array(this.musics.length).fill(true);
     this.musicTag = new Array(this.musics.length);
     for (let i = 0; i < this.musicTag.length; i++) {
       this.musicTag[i] = new Array(this.tags.length);
@@ -357,6 +366,27 @@ export default {
     },
     onClickTag(id, next) {
       this.$set(this.tags[id], "state", next);
+      this.onTagCheck();
+    },
+    onTagCheck() {
+      for (let j = 0; j < this.musics.length; j++) {
+        let res = true;
+        for (let i = 0; i < this.tags.length; i++) {
+          if (
+            this.tags[i].state === 1 &&
+            this.musicTag[j][Number(this.tags[i].id)] === 0
+          )
+            res = false;
+          if (
+            this.tags[i].state === 2 &&
+            this.musicTag[j][Number(this.tags[i].id)] === 1
+          )
+            res = false;
+        }
+        this.$set(this.isShow, j, res);
+      }
+
+      return;
     },
     onPlay(name, url) {
       if (this.playingMusicName !== name) {
@@ -393,7 +423,7 @@ export default {
             return 0;
           }
         });
-      } else {
+      } else if (type === 2 || type === 3) {
         this.musics.sort(function(a, b) {
           if (a[4] < b[4]) {
             return -1;

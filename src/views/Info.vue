@@ -3,7 +3,7 @@
     <transition name="el-fade-in-linear">
       <div id="account">
         <h1><i class="el-icon-menu" /> Account</h1>
-        <el-card class="box-card2">
+        <el-card class="box-card2" shadow="hover">
           <el-link target="_blank" href="https://twitter.com/Hakuba_snow"
             ><h3>Twitter</h3></el-link
           >
@@ -12,7 +12,7 @@
           </p>
         </el-card>
 
-        <el-card class="box-card2">
+        <el-card class="box-card2" shadow="hover">
           <el-link
             target="_blank"
             href="https://www.youtube.com/channel/UCW4FH8oKhHE8vIRnr0StJ8g"
@@ -22,7 +22,7 @@
             <img class="box-image" src="../assets/youtube.png" />
           </p>
         </el-card>
-        <el-card class="box-card2">
+        <el-card class="box-card2" shadow="hover">
           <el-link target="_blank" href="https://soundcloud.com/aya_se"
             ><h3>SoundCloud</h3></el-link
           >
@@ -35,7 +35,7 @@
     <transition name="el-fade-in-linear">
       <div id="contact">
         <h1><i class="el-icon-folder" /> Software</h1>
-        <el-card class="box-card2">
+        <el-card class="box-card2" shadow="hover">
           <el-link
             target="_blank"
             href="https://www.mi7.co.jp/products/presonus/studioone/"
@@ -55,6 +55,9 @@
         <p><b>Twitter： </b>@Hakuba_snow</p>
       </div>
     </transition>
+    <router-link to="/" class="link-content">
+      <h2>aya_se's music</h2></router-link
+    >
   </div>
 </template>
 

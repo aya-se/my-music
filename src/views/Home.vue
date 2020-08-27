@@ -12,7 +12,7 @@
             >音楽一覧へ</el-button
           >
         </p>
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="hover">
           <h3>
             <label for="name"
               ><i class="el-icon-success" /> 無料、商用可能</label
@@ -20,7 +20,7 @@
           </h3>
           <p>Youtubeの収益化などにも、大丈夫ではないかと思います。たぶん。</p>
         </el-card>
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="hover">
           <h3>
             <label for="name"
               ><i class="el-icon-s-promotion" /> 自由な使用目的</label
@@ -30,22 +30,12 @@
             BGMとして使用する限りはコンテンツ内容に制限はありません。おそらく。
           </p>
         </el-card>
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="hover">
           <h3>
             <label for="name"><i class="el-icon-edit" /> 改変OK</label>
           </h3>
           <p>
             尺の調整、切り貼りして繰り返しなど自由に行えます。probably。
-          </p>
-        </el-card>
-        <el-card class="box-card">
-          <h3>
-            <label for="name"
-              ><i class="el-icon-s-comment" /> 感想を是非！</label
-            >
-          </h3>
-          <p>
-            曲への意見や感想など歓迎しています！サイトのフォームよりお願いします。
           </p>
         </el-card>
       </div>

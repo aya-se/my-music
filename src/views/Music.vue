@@ -124,23 +124,37 @@
                   circle
                 />
                 <el-button
-                  v-if="m[6].length > 70 && !expander[Number(m[0])]"
+                  v-if="m[7].length > 70 && !expander[Number(m[0])]"
                   type="primary"
                   icon="el-icon-chat-dot-round"
                   @click="onExpand(Number(m[0]), true)"
                   circle
                 />
                 <el-button
-                  v-if="m[6].length > 70 && expander[Number(m[0])]"
+                  v-if="m[7].length > 70 && expander[Number(m[0])]"
                   type="primary"
                   icon="el-icon-close"
                   @click="onExpand(Number(m[0]), false)"
                   circle
                 />
                 <el-button
-                  v-if="m[6].length <= 70"
+                  v-if="m[7].length <= 70"
                   type="primary"
                   icon="el-icon-chat-dot-round"
+                  disabled
+                  circle
+                />
+                <el-button
+                  v-if="m[6].length > 0"
+                  type="primary"
+                  icon="el-icon-video-camera-solid"
+                  circle
+                  @click="onClick(m[6])"
+                />
+                <el-button
+                  v-if="m[6].length == 0"
+                  type="primary"
+                  icon="el-icon-video-camera-solid"
                   disabled
                   circle
                 />
@@ -166,16 +180,16 @@
                 >
               </p>
             </el-alert>
-            <div v-if="m[6].length > 70">
+            <div v-if="m[7].length > 70">
               <p class="music-text" v-if="!expander[Number(m[0])]">
-                {{ m[6].slice(0, 70) }}...
+                {{ m[7].slice(0, 70) }}...
               </p>
               <p class="music-text" v-if="expander[Number(m[0])]">
-                {{ m[6] }}
+                {{ m[7] }}
               </p>
             </div>
-            <div v-if="m[6].length <= 70">
-              <p class="music-text">{{ m[6] }}</p>
+            <div v-if="m[7].length <= 70">
+              <p class="music-text">{{ m[7] }}</p>
             </div>
           </el-card>
         </transition>
@@ -316,7 +330,11 @@ export default {
         { id: 49, name: "Hackathon", state: 0 },
         { id: 50, name: "M3", state: 0 },
         { id: 51, name: "新歓コンピ", state: 0 },
-        { id: 52, name: "traP2DTM", state: 0 }
+        { id: 52, name: "traP2DTM", state: 0 },
+        { id: 53, name: "Vocaloid", state: 0 },
+        { id: 54, name: "初音ミク", state: 0 },
+        { id: 55, name: "AIきりたん", state: 0 },
+        { id: 56, name: "正月", state: 0 }
       ],
       musicTag: [],
       tagData: [],
@@ -538,10 +556,10 @@ export default {
     display: inline-block;
     width: 30%;
     height: 50px;
-    float: right;
+    float: right !important;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .card-top {
     height: auto;
   }

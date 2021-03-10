@@ -23,6 +23,14 @@
           </p>
         </el-card>
         <el-card class="box-card2" shadow="hover">
+          <el-link target="_blank" href="https://www.nicovideo.jp/series/183850"
+            ><h3>NicoNico</h3></el-link
+          >
+          <p>
+            <img class="box-image" src="../assets/niconico.png" />
+          </p>
+        </el-card>
+        <el-card class="box-card2" shadow="hover">
           <el-link target="_blank" href="https://soundcloud.com/aya_se"
             ><h3>SoundCloud</h3></el-link
           >
@@ -43,6 +51,16 @@
           >
           <p>
             <img class="box-image" src="../assets/studio_one.png" />
+          </p>
+        </el-card>
+        <el-card class="box-card2" shadow="hover">
+          <el-link
+            target="_blank"
+            href="https://sonicwire.com/product/virtualsinger/special/mikunt"
+            ><h3>初音ミクNT</h3></el-link
+          >
+          <p>
+            <img class="box-image" src="../assets/hatsune_miku.png" />
           </p>
         </el-card>
       </div>

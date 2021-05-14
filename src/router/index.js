@@ -9,21 +9,25 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    meta: { title: "ayase-music | About", desc: "" }
   },
   {
     path: "/music",
     name: "Music",
-    component: Music
+    component: Music,
+    meta: { title: "ayase-music | Music", desc: "" }
   },
   {
     path: "/info",
     name: "Info",
-    component: Info
+    component: Info,
+    meta: { title: "ayase-music | Info", desc: "" }
   },
   {
     path: "*",
-    component: Home
+    component: Home,
+    meta: { title: "ayase-music | About", desc: "" }
   }
 ];
 

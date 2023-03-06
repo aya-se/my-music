@@ -4,38 +4,11 @@
       <div id="account">
         <h1><i class="el-icon-menu" /> Account</h1>
         <el-card class="box-card2" shadow="hover">
-          <el-link target="_blank" href="https://twitter.com/Hakuba_snow"
+          <el-link target="_blank" href="https://twitter.com/ayase_lab"
             ><h3>Twitter</h3></el-link
           >
           <p>
             <img class="box-image" src="../assets/twitter.png" />
-          </p>
-        </el-card>
-
-        <el-card class="box-card2" shadow="hover">
-          <el-link
-            target="_blank"
-            href="https://www.youtube.com/channel/UCW4FH8oKhHE8vIRnr0StJ8g"
-            ><h3>Youtube</h3></el-link
-          >
-          <p>
-            <img class="box-image" src="../assets/youtube.png" />
-          </p>
-        </el-card>
-        <el-card class="box-card2" shadow="hover">
-          <el-link target="_blank" href="https://www.nicovideo.jp/series/183850"
-            ><h3>NicoNico</h3></el-link
-          >
-          <p>
-            <img class="box-image" src="../assets/niconico.png" />
-          </p>
-        </el-card>
-        <el-card class="box-card2" shadow="hover">
-          <el-link target="_blank" href="https://soundcloud.com/aya_se"
-            ><h3>SoundCloud</h3></el-link
-          >
-          <p>
-            <img class="box-image" src="../assets/sound_cloud.png" />
           </p>
         </el-card>
       </div>
@@ -70,7 +43,7 @@
         <h1><i class="el-icon-s-comment" /> Contact</h1>
         GmailもしくはTwitterがおそらく一番反応早いと思うので、載せておきます。
         <p><b>Gmail： </b>kakkeno1@gmail.com</p>
-        <p><b>Twitter： </b>@Hakuba_snow</p>
+        <p><b>Twitter： </b>@ayase_lab</p>
       </div>
     </transition>
     <router-link to="/" class="link-content">
